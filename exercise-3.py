@@ -13,18 +13,18 @@
 
 def doggo_age():
     try:
-        age = int(input('Input a dog\'s age in human years: '))
+        age = float(input('Input a dog\'s age in human years: '))
         if 0 < age <= 2:
             age *= 10
-            print(f'The dog\'s age in dog years is {age}')
+            print(f'The dog\'s age in dog years is {round(age)}')
         elif 2 < age < 30: 
             age = 20 + (age - 2) * 7
-            print(f'The dog\'s age in dog years is {age}')
+            print(f'The dog\'s age in dog years is {round(age)}')
         elif age >= 31:
-            print('The world\'s verified oldest dog Bluey lived 29 years, 5 months. RIP good doggo.')
+            print('The world\'s oldest doggo Bluey lived to 29 years, RIP, so check your number dawg?')
         else:
-            print('Negative age doesn\'t make much sense does it dawg?')
+            print(f'{round(age)}? That don\'t make much sense my dawg?')
     except:
-        print('You didn\'t enter a number dawg.')
+        print('You didn\'t enter a number my dawg.')
 
 doggo_age()
